@@ -87,8 +87,8 @@ const generatingResume = async (input) => {
     workExperienceContainer.innerHTML += ` <div class="work_insert">
   <div class="bold">${input[0].value}</div>
   <div class="regular">${input[1].value}</div>
-  <div class="thin_grey">${input[2].value}</div>
-  <div class="thin">
+  <div class="thin">${input[2].value}</div>
+  <div class="thin_grey">
   ${input[3].value}
   </div>
 </div>`;
@@ -101,7 +101,7 @@ const generatingResume = async (input) => {
     <div class="bold">${input[0].value}</div>
 
     <div class="thin">
-    ${input[0].value}
+    ${input[1].value}
     </div>
   </div>`;
   });
@@ -152,7 +152,7 @@ generateResume.onclick = () => {
   let resume = 1;
   
   inputs.forEach((input) => {
-    if (input.value !== "") {resume =2}
+    if (input.value !== "") {resume =1}
     else {
       resume++
    
@@ -162,6 +162,7 @@ generateResume.onclick = () => {
   setTimeout(() => {
     errorMsg.style.display = "none";
   }, 3000)
+  generatingResume()
 };
 
 const canvas = () => {
