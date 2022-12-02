@@ -307,3 +307,9 @@ div[data-dashboard] {
 div[data-dashboard]:hover{
   opacity: 0.8;
 }
+
+@media screen and (max-width: 700px) {
+  .details{
+    flex-direction: column;
+  }
+}
