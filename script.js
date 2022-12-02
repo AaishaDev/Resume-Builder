@@ -149,16 +149,19 @@ const generatingResume = async (input) => {
 
 generateResume.onclick = () => {
   const inputs = document.querySelectorAll("input");
-  // generatingResume();
+  let resume = 1;
+  
   inputs.forEach((input) => {
-    if (input.value !== "") generatingResume();
+    if (input.value !== "") {resume =2}
     else {
-      errorMsg.style.display = "block";
-      setTimeout(() => {
-        errorMsg.style.display = "none";
-      }, 3000);
+      resume++
+   
     }
   });
+  resume==1?generatingResume(): errorMsg.style.display = "block";
+  setTimeout(() => {
+    errorMsg.style.display = "none";
+  }, 3000)
 };
 
 const canvas = () => {
