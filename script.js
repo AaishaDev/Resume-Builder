@@ -149,7 +149,7 @@ const generatingResume = async (input) => {
 
 generateResume.onclick = () => {
   const inputs = document.querySelectorAll("input");
-  
+  // generatingResume();
   inputs.forEach((input) => {
     if (input.value !== "") generatingResume();
     else {
