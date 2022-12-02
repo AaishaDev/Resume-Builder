@@ -162,7 +162,7 @@ generateResume.onclick = () => {
   setTimeout(() => {
     errorMsg.style.display = "none";
   }, 3000)
-  generatingResume()
+  // generatingResume()
 };
 
 const canvas = () => {
