@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --blue: #3898d8;
+  --black: #3d3c3c;
+  --stroke: #bfbdbd;
+  --gray: #636363;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--blue);
+  /* padding: 3rem 0; */
+  font-family: "Poppins", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+}
+.container {
+  background-color: white;
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  border-radius: 4px;
+}
+.main_title {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--blue);
+}
+.divider {
+  margin: 1.5rem 0;
+  width: 100%;
+  height: 2px;
+  background-color: #bfbdbd;
+}
+.details {
+  display: flex;
+  gap: 1.4rem;
+  width: 100%;
+}
+.details div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.details div div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.input {
+  background: #d3d1d1;
+  border-radius: 4px;
+  color: #2e2d2d;
+  width: 50%;
+  padding: 0.3rem 0.5rem;
+  font-size: 11px;
+}
+.input:hover{
+  color: black;
+  background-color: #fefefe;
+}
+
+.avatar {
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-direction: row !important;
+}
+input[data-img-input] {
+  display: none;
+}
+input {
+  border: 2px solid #bfbdbd;
+  height: 3.375rem;
+  width: 100%;
+  border-radius: 2px;
+  padding: 0 10px;
+}
+.dashboard .title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 20px;
+}
+input::placeholder {
+  color: var(--gray);
+  opacity: 1;
+  font-weight: 500;
+}
+input:focus {
+  outline: none;
+  border: 2px solid var(--blue);
+}
+button {
+  color: white;
+  margin: auto;
+  border: none;
+  outline: none;
+  padding: 1rem 1.4rem;
+  width: 25%;
+  background: var(--blue);
+  border-radius: 4px;
+}
+.generate {
+  margin-bottom: 2rem;
+  font-weight: 600;
+
+  width: 100% !important;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  outline: none;
+  background-color: white;
+  color: var(--blue) !important;
+  padding: 1.2rem 2.4rem !important;
+}
+.generate:hover{
+  opacity: 0.8;
+}
+.btn {
+  width: 12rem;
+  margin: 1.2rem auto auto auto !important;
+}
+/* No idea why the hellllll this css affecting canvas elemm */
+/* span{
+    color: aliceblue;
+    display: none;
+ } */
+
+#error {
+  color: aliceblue;
+  display: none;
+  margin-bottom: 1rem;
+}
+.view_resume {
+  display: none;
+}
+.view_resume .container2 {
+  margin: 3rem auto;
+  max-width: 750px;
+  background: linear-gradient(90deg, white 70%, var(--blue) 30%);
+  box-shadow: 1px 1px 30px blue;
+  padding: 1.3rem;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.container2 .left .personal_details {
+  display: flex;
+  gap: 1rem;
+}
+.container2 .address .address_details {
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  gap: 0.4rem;
+}
+.fa {
+  /* font-size: 0.8rem !important; */
+  color: #3d3c3c;
+}
+
+.container2 .name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #101214;
+}
+.container2 .title {
+  font-weight: 600;
+  font-size: 16px;
+
+  color: #3898d8;
+}
+.line {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  left: 2rem;
+  background-color: var(--blue);
+}
+
+.container2 .work_details {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+.container2 .work_experience,
+.achievements2,
+.education {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container2 .work_experience,
+.achievements2,
+.education > p {
+  font-weight: 500;
+  font-size: 12px;
+
+  color: #3898d8;
+}
+.container2 .bold {
+  font-weight: 600;
+  font-size: 14px;
+
+  color: #000000;
+}
+.container2 .regular {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+
+  color: #000000;
+}
+.container2 .thin_grey {
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 18px;
+  /* or 200% */
+
+  color: #73808d;
+}
+.container2 .thin {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  /* or 136% */
+  width: 95%;
+
+  color: #101214;
+}
+.container2 .achievement_insert {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container2 .right {
+  padding-left: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.container2 .heading {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  /* or 175% */
+
+  color: #ddeeff;
+}
+.container2 .text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 18px;
+  /* or 164% */
+
+  color: #ffffff;
+}
+.container2 .insert_skill,
+.insert_language {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.image {
+  width: 100px;
+  height: 100px;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+}
+div[data-save],
+div[data-dashboard] {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 0.8rem 2rem;
+  width: 10%;
+  margin: auto;
+  text-align: center;
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+div[data-save]:hover {
+  opacity: 0.9;
+}
+div[data-dashboard] {
+  width: 30%;
+  margin-top: 1rem;
+}
+div[data-dashboard]:hover{
+  opacity: 0.8;
+}

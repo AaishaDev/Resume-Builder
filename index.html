@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="./script.js" defer></script>
+
+    <title>Resume Builder</title>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="container">
+        <div class="main_title">Resume Builder</div>
+        <div class="divider"></div>
+
+        <div class="details">
+          <div>
+            <div class="personal_info">
+              <div class="avatar">
+                <div class="title">Personal Information</div>
+                <input data-img-input ="" type="file" accept="image/*" >
+                <p class="input" data-img-choose>Choose Image</p>
+              </div>
+              <div>
+                <input data-get-name
+                  autocomplete="off"
+                  type="text"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div>
+                <input data-get-email
+                  autocomplete="off"
+                  type="text"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div>
+                <input data-get-mobile
+                  autocomplete="off"
+                  type="text"
+                  placeholder="Enter your mobile no"
+                />
+              </div>
+              <div>
+                <input data-get-address
+                  autocomplete="off"
+                  type="text"
+                  placeholder="Enter your address"
+                />
+              </div>
+            </div>
+
+            <div data-add  data-academic class="academic_qualification">
+              <div class="title">Academic Qualification</div>
+              <div class="insert">
+                <div>
+                  <input autocomplete="off" type="text" placeholder="Title" />
+                </div>
+                <div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder="University or college name"
+                  />
+                </div>
+                <div>
+                  <input autocomplete="off" type="text" placeholder="Session" />
+                </div>
+              </div>
+              <button class="add_more" data-add-more>Add more</button>
+            </div>
+
+            <div data-add data-achievement class="achievements">
+              <div class="title">Achievements</div>
+              <div class="insert">
+                <div>
+                  <input autocomplete="off" type="text" placeholder="Title" />
+                </div>
+                <div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder="University or college name"
+                  />
+                </div>
+                
+              </div>
+              <button class="add_more" data-add-more>Add more</button>
+            </div>
+
+            <div class="hobbies">
+              <div class="title">Hobbies</div>
+              <div>
+                <input data-get-hobbies
+                  autocomplete="off"
+                  type="text"
+                  placeholder="Enter your hobbies"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="professional_info">
+              <div class="title">Professional Information</div>
+              <div>
+                <input data-get-title
+                  autocomplete="off"
+                  type="text"
+                  placeholder="Enter your title e.g web developer"
+                />
+              </div>
+              <div>
+                <input data-get-objective autocomplete="off" type="text" placeholder="Objective" />
+              </div>
+            </div>
+
+            <div data-add data-work-ex class="work_experience">
+              <div class="title">Work Experience</div>
+              <div class="insert">
+                <div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder="Enter your title"
+                  />
+                </div>
+                <div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder="Company name"
+                  />
+                </div>
+                <div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder="Description"
+                  />
+                </div>
+                <div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder="Duration"
+                  />
+                </div>
+              </div>
+              <button class="add_more" data-add-more>Add more</button>
+            </div>
+
+            <div data-add data-skills class="skills">
+              <div class="title">Skills</div>
+              <div class="insert">
+                <div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder="Enter Your skill"
+                  />
+                </div>
+                <div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder="Description"
+                  />
+                </div>
+              </div>
+
+              <button class="add_more" data-add-more>Add more</button>
+            </div>
+
+            <div data-add data-languages class="languages">
+              <div class="title">Languages</div>
+              <div class="insert">
+                <div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    placeholder="Enter your language"
+                  />
+                </div>
+                <div>
+                  <input type="text" placeholder="Native/Fluent/Intermediate" />
+                </div>
+              </div>
+              <button class="add_more" data-add-more>Add more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn">
+        <button data-generate class="generate">Generate Resume</button>
+        <span id="error">***Please fill all fields***</span>
+      </div>
+      <a href="./view.html"></a>
+    </div>
+    <div class="view_resume">
+      <div data-dashboard>&#171; Back to Dashboard</div>
+      <div class="container2">
+        <div class="left">
+          <div class="personal_details">
+            <div class="image">
+              <!-- <img data-img-view src="./image/unsplash_uR51HXLO7G0.png" alt="" /> -->
+              <img data-img-view src="https://www.bing.com/th?id=OIP.Ghae4OEdb4UmC3hkqpFvLAHaGd&w=267&h=233&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2" alt="" />
+            </div>
+            <div class="information">
+              <div data-set-name class="name">Sheerrin Jackson</div>
+              <div data-set-title class="title">Web Designer</div>
+              <div class="address">
+                <div class="address_details">
+                  <i class="fa fa-phone"></i>
+                  <p data-set-mobile>+917970809639</p>
+                </div>
+                <div class="address_details">
+                  <i class="fa fa-envelope"></i>
+                  <p data-set-email>anybody@gmail.com</p>
+                </div>
+                <div class="address_details">
+                  <i class="fa fa-street-view"></i>
+                  <p data-set-address>Bangalore,India</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work_details">
+            <div class="line"></div>
+            <div data-wes-container class="work_experience">
+              <p>Work Experience</p>
+              <!-- <div class="work_insert">
+                <div class="bold">Website Designer</div>
+                <div class="regular">Balads MAp</div>
+                <div class="thin_grey">Aug 2022 - currently working here</div>
+                <div class="thin">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Laudantium assumenda impedit sint repellendus cumque
+                  blanditiis. Recusandae reprehenderit, tempore fugit assumenda
+                  animi 
+                  modi, qui perferendis quidem quam minus esse sapiente commodi
+                  assumenda ratione harum. Sequi.
+                </div>
+              </div>
+              <div class="work_insert">
+                <div class="bold">Website Designer</div>
+                <div class="regular">Balads MAp</div>
+                <div class="thin_grey">Aug 2022 - currently working here</div>
+                <div class="thin">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Laudantium assumenda impedit sint repellendus cumque
+                  blanditiis. Recusandae reprehenderit, tempore fugit assumenda
+                  animi voluptates sit eos vero fuga minus provident
+                  consequatur, necessitatibus id quaerat, blanditiis nisi quo
+                  autem nam ut a excepturi. Lorem, ipsum dolor sit amet
+                  consectetur adipisicing elit. Doloremque recusandae sunt ipsum
+                  modi, qui perferendis quidem quam minus esse sapiente commodi
+                  assumenda ratione harum. Sequi.
+                </div>
+              </div> -->
+            </div>
+            <div data-achievement-container class="achievements2">
+              <p>Achievements</p>
+              <!-- <div class="achievement_insert">
+                <div class="bold">App on App store</div>
+    
+                <div class="thin">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Laudantium assumenda impedit sint repellendus cumque
+                  blanditiis. Recusandae reprehenderit, tempore fugit assumenda
+                  animi voluptates sit eos vero fuga minus provident
+                  conseqmmodi
+                  assumenda ratione harum. Sequi.
+                </div>
+              </div> -->
+              
+              
+            </div>
+            <div data-education-container class="education">
+              <p>Education</p>
+              <!-- <div class="education_insert">
+                <div class="bold">Bachelor of computer application</div>
+    
+                <div class="regular">
+                  S.P.M college, Udantpuri
+                </div>
+                <div class="thin_grey">Pursuing</div>
+              </div>
+              
+              <div class="education_insert">
+                <div class="bold">Diploma in Computer Education</div>
+    
+                <div class="regular">
+                    3s Life Safe Akademie
+                </div>
+                <div class="thin_grey">2016 - 2019</div>
+              </div>
+              
+              <div class="education_insert">
+                <div class="bold">Bachelor of computer application</div>
+    
+                <div class="regular">
+                  S.P.M college, Udantpuri
+                </div>
+                <div class="thin_grey">Pursuing</div>
+              </div> -->
+              
+              
+            </div>
+          </div>
+        </div>
+        <div class="right">
+            <div class="img"><img src="./image/Vector.png" alt=""></div>
+            <div class="section">
+                <p class="heading">Carrier Objective</p>
+                <p  data-set-objective class="text">I take pride in building innovative web applications from scratch. This allows me to design websites that go beyond just looking beautiful and provide real value for your clients.I am a highly moand always pushing myself to reach my goals.
+
+                </p>
+            </div>
+            <div data-skills-container class="skills">
+                <p class="heading" >Skills</p>
+                <!-- <div class="insert_skill">
+                    <p class="skill_title">
+                        Research
+                    </p>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos reiciendis, doloribus quaerat omnis deserunt excepturi!
+                    </p>
+                </div>
+                <div class="insert_skill">
+                    <p class="skill_title">
+                        Research
+                    </p>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos reiciendis, doloribus quaerat omnis deserunt excepturi!
+                    </p>
+                </div> -->
+
+
+            </div>
+            <div data-languages-container class="section">
+                <p class="heading" >Languages</p>
+                <!-- <div class="insert_language">
+                    <p class="language_title">
+                        English
+                    </p>
+                    <p class="text">
+                        Intermediate working proficiency                    </p>
+                </div>
+                <div class="insert_language">
+                    <p class="language_title">
+                        Hindi
+                    </p>
+                    <p class="text">
+                       Native Speaker
+                    </p>
+                </div> -->
+
+            </div>
+            <div class="section">
+                <p class="heading" >Hobbies</p>
+                <p data-set-hobbies class="text">Volunteering,
+                    Painting/Sketching,
+                    Blogging,
+                    Photography,
+                    Arts and crafts, Journaling, Chatting with friends, Travelling</p>
+
+            </div>
+        </div>
+      </div>
+     
+      <div data-save>Save</div>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
